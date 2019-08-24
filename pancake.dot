@@ -1,0 +1,30 @@
+digraph G {
+
+	Jajka
+	Mleko[label="litr mleka"]
+	Maka[label="430 g maki"]
+	sol[label="szczypta soli"]
+        Misa[shape=rectangle]
+        Misa2[shape=rectangle,label="Misa z roztrzepanaymi jajami"]
+	Patelnia[shape=rectangle,label="Rozgrzana patelnia"]
+        Misa3[shape=rectangle,label="Misa z ciastem"]
+
+	{rank=same Jajka Misa sol }
+	{rank=same Maka Misa2 Mleko}
+	//{rank=same Talerz}
+
+        Jajka -> Misa[label="rozbij"]
+        sol -> Misa
+        Misa -> Misa2[label="wymieszaj"]
+ 	Mleko -> Misa2
+	Maka -> Misa2[label="przesitkuj"]
+	Misa2 -> Misa3[label="Wymieszaj"]
+
+	
+	subgraph cluster_A {
+	label="Powtarzaj az wyczerpiesz ciasto"
+	Misa3 -> Patelnia[label="nalej ciasto na nalesnika"]
+	Patelnia -> Talerz[label="smaz nalesnika"]
+	Talerz[shape=rectangle,label="Talerz"]
+	}
+}
