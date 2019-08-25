@@ -1,0 +1,46 @@
+digraph G {
+  makaron[label="500g makaronu"]
+  olej_sezamowy[label="1 lyzka oleju sezamowego"]
+  olej_archaidowy[label="2 lyzki oleju archaidowego"]
+  czosnek[label="3 zabki czosnku"]
+  czosnek2[label="Posiekany czosnek"]
+  krewetki[label="300g krewetek"]
+  krewetki2[label="Obrane krewetki"]
+  groszek[label="200g groszku"]
+  groszek2[label="odsaczony gorszek"]
+  pieprz[label="szczypta pieprzu"]
+  sol[label="szczypta soli"]
+  jasny[label="2 lyzki jasnego sosu sojowego"]
+  ciemny[label="2 lyzki ciemnego sosu sojowego"]
+  Misa2[label="Wymieszany makaron z olejem"]
+
+  makaron -> garnek[label="ugotuj"]
+  garnek -> Misa
+  olej_sezamowy -> Misa
+  Misa -> Misa2[label="wymieszaj"]
+
+  czosnek -> czosnek2[label="Posiekaj"]
+  marchew -> marchew2[label="Potnij w slupki"]
+  groszek -> groszek2[label="Odsacz groszek"]
+  krewetki -> krewetki2[label="usun jelita i pancerzyki"]
+  
+ {rank=same groszek2 czosnek2 marchew2 krewetki2 Misa2 olej_archaidowy pieprz sol jasny ciemny}
+
+
+  olej_archaidowy -> Wok
+  Wok -> Wok2[label="Rozgrzej olej", weight=100]
+  czosnek2 -> Wok2
+  Wok2 -> Wok3[label="Podsmaz czosek ok. 30", weight=100] 
+  krewetki2 -> Wok3
+  Wok3 -> Wok4[label="Podsmazaj krewetki az sie zarozowia", weight=100]
+  marchew2 -> Wok4
+  groszek2 -> Wok4
+  Wok4 -> Wok5[label="Podsmazaj az groszek i marchew zaczna sie rozgrzewac", weight=100]
+  Misa2 -> Wok5
+  Wok5 -> Wok6[label="Dobrze wymieszaj", weight=100]
+  Wok6 -> Wok7[label="Zmniejsz ogien", weight=100]
+  {sol, pieprz, jasny, ciemny }-> Wok7
+  Wok7 -> Talerz[label="Przeloz na talerze", weight=100]
+  
+
+}
