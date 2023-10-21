@@ -1,0 +1,76 @@
+
+digraph G {
+  fontsize=40
+  label="\n\nWyrabianie Pizzy"
+  {rank=same talerz,maka}
+  {rank=same wytnij,pojemnik,talerz2}
+  //{rank=same pojemnik2,maka2,obroc,pojemnik3}
+  {rank=same pojemnik2,pojemnik3}
+  {rank=same kamien,piec,piec2}
+  {rank=same sos,pojemnik6}
+  {rank=same oliwa,pojemnik7}
+  {rank=same lopata,pojemnik8}
+  {rank=same dodatki,pojemnik10}
+  maka[label="maka\n (nie musi byc typ 00)"]
+  maka2[label="maka\n (nie musi byc typ 00)"]
+  sos[label="Sos pomidorowy"]
+  oliwa[label="oliwa"]
+  kamien[label="Kamien do pizzy"]
+  dodatki[label="ser(mozzarella) i inne skladniki"]
+  talerz[label="talerz",shape=rectangle]
+  talerz2[label="talerz z maka",shape=rectangle]
+  wytnij[label="Wytnij kulke ciasta\nnozem do pizzy\numoczonym w mace",shape=none]
+  obroc[label="Obroc kilka razy\nciasto w mace",shape=none]
+  piec[shape=rectangle,label="Piekarnik"]
+  piec2[shape=rectangle,label="Rozgrzany Piekarnik"]
+  piec3[shape=rectangle,label="Rozgrzany Piekarnik"]
+  pojemnik[shape=rectangle,label="blacha z kulkami ciasta"]
+  pojemnik2[shape=rectangle,label="stolnica"]
+  pojemnik3[shape=rectangle,label="stolnica oproszona maka"]
+  pojemnik4[shape=rectangle,label="kulka ciasta na stolnicy"]
+  pojemnik5[shape=rectangle,label="placek na pizze na stolnicy"]
+  pojemnik6[shape=rectangle,label="rozciagniety placek na pizze na stolnicy"]
+  pojemnik7[shape=rectangle,label="Placek z sosem pomidorowym"]
+  pojemnik8[shape=rectangle,label="Placek z sosem\npomidorowym i olejem"]
+  pojemnik9[shape=rectangle,label="Placek w piecu"]
+  pojemnik10[shape=rectangle,label="Upieczony placek na pizze"]
+  pojemnik11[shape=rectangle,label="Pizza z surowymi dodatkami"]
+  pojemnik12[shape=rectangle,label="Gotowa pizza"]
+  zagniataj[shape=none,label="wygniataj powietrze do krawedzi"]
+  zagniataj2[shape=none,label="wygniataj powietrze do krawedzi"]
+  obroc2[shape=none,label="obroc placek na druga strone"]
+  obroc3[shape=none,label="obroc placek na druga strone"]
+  poszerz[shape=none,label="Prawa reka przyciska a lewa rozciagaj\n"]
+  poszerz2[shape=none,label="Poloz rozciagniete \nciasto na prawej rece\n"]
+  odloz[shape=none,label="Odloz placek na stolnice"]
+  odloz2[shape=none,label="Odloz placek na stolnice"]
+  rozciagaj[shape=none,label="Rozciagaj delikatnie\nplacek oboma rekami"]
+  wez[shape=none,label="Wez placek do obu rak"]
+  wyjmij[shape=none,label="Wyjmij upieczony placek"]
+  wyjmij2[shape=none,label="Wyjmij upieczona pizze"]
+  piecz[shape=none,label="Piecz az pizza \nbedzie zlotego koloru"]
+  piecz2[shape=none,label="Piecz az mozzarella\nbedzie babelkowac"]
+kamien->piec[label="wloz"]
+piec->piec2[label="rozgrzej do 300\nstopni przez godzine"]
+talerz->maka->talerz2
+maka2->pojemnik2[label="oprosz"]
+pojemnik2->pojemnik3
+pojemnik->wytnij
+wytnij->talerz2[label="poloz na talerzu\n z maka"]
+talerz2->obroc->pojemnik3[weight=100]
+pojemnik3->pojemnik4->zagniataj->obroc2->zagniataj2->obroc3->pojemnik5->poszerz->poszerz2->odloz
+odloz->poszerz[label="powtarzaj az bedzie\n z 16 cm srednica"]
+odloz->wez->rozciagaj->odloz2->pojemnik6
+sos->pojemnik6[label="wysmaruj"]
+pojemnik6->pojemnik7
+oliwa->pojemnik7[label="wysmaruj krawedz"]
+pojemnik7->pojemnik8
+lopata->pojemnik8[label="Podwaz placek"]
+pojemnik8->piec2[label="wloz pizze"]
+piec2->pojemnik9->piecz->wyjmij->pojemnik10
+dodatki->pojemnik10[label="naloz dodatki"]
+pojemnik10->pojemnik11
+pojemnik11->piec3[label="Wloz"]
+piec3->piecz2->wyjmij2->pojemnik12
+
+}

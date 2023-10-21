@@ -1,0 +1,70 @@
+
+digraph G {
+  fontsize=30
+  label="\n\nWolowina marynowana w miodzie z ryzem i orzechami"
+  {rank=same woda,pojemnik,miod}
+  {rank=same olej,patelnia}
+  {rank=same czosnek,patelnia2,cebula}
+  {rank=same olej2,imbir,patelnia3,orzechy}
+  {rank=same cynamon,papryka,patelnia4,kumin}
+  {rank=same mieso,pojemnik3}
+  {rank=same pojemnik5,piekarnik2}
+  {rank=same pojemnik6,patelnia5}
+  {rank=same sos,patelnia6}
+  pojemnik[shape=rectangle,label="pusty pojemnik"]
+  pojemnik2[shape=rectangle,label="pojemnik z woda i miodem"]
+  pojemnik3[shape=rectangle,label="pojemnik z rozpuszczonym miodem"]
+  pojemnik4[shape=rectangle,label="pojemnik z miodem,woda i wolowina"]
+  pojemnik5[shape=rectangle,label="marynowana wolowina na miodzie"]
+  pojemnik6[shape=rectangle,label="upieczona, marynowana wolowina na miodzie"]
+  miod[label="Miod\n(Dwie lyzki stolowe)"] 
+  cynamon[label="Cynamon\n(1 lyzeczka)"] 
+  papryka[label="Papryka\n(starta, 1 lyzeczka)"] 
+  kumin[label="Kumin\n(1 lyzeczka)"] 
+  imbir[label="Imbir\n(Male klacze)"] 
+  orzechy[label="Orzechy nerkowca\n(80 gram)"] 
+  woda[label="Woda\n(Pol szklanki)"] 
+  olej2[label="Olej sezamowy\n(1 lyzka stolowa)"] 
+  mieso[label="Poledwica wolowa\n(0.4 kg)"] 
+  sos[label="Sos ostrygowy\n(2 stolowe lyzki)"] 
+  mieszaj[label="wymieszaj",shape=none] 
+  mieszaj2[label="wymieszaj",shape=none] 
+  odstaw[label="Odstaw do lodowki na kilka godzin \n(przynajmniej 2h)",shape=none] 
+  rozgrzej[label="Rozgrzej patelnie",shape=none] 
+  podsmaz[label="Smaz 2-3 minuty",shape=none] 
+  piecz[label="Piecz przez 20 min",shape=none] 
+  miod->pojemnik
+  woda->pojemnik
+  pojemnik->pojemnik2->mieszaj->pojemnik3
+  mieso->pojemnik3[label="Pokroj i usun blony"]
+  pojemnik3->pojemnik4->odstaw->pojemnik5
+  piekarnik[label="Piekarnik",shape=rectrangle]
+  piekarnik2[label="Piekarnik rozgrzany do 180 stopni",shape=rectrangle]
+
+  pojemnik5->piekarnik2
+  piekarnik->piekarnik2[label="Rozgrzej do 180 stopni"]
+  piekarnik2->piecz->pojemnik6
+
+  patelnia[label="Patelnia",shape=rectangle]
+  patelnia2[label="Rozgrzana Patelnia",shape=rectangle]
+  patelnia3[label="Rozgrzana Patelnia\nz czosnkiem i cebula",shape=rectangle]
+  patelnia4[label="Rozgrzana Patelnia\nze skladnikami",shape=rectangle]
+  patelnia5[label="Rozgrzana Patelnia\nze skladnikami i przyprawami",shape=rectangle]
+  patelnia6[label="Rozgrzana Patelnia\nz miesem i pozostalyimi  skladnikami",shape=rectangle]
+
+  olej->patelnia->rozgrzej->patelnia2
+  cebula->patelnia2[label="posiekaj"]
+  czosnek->patelnia2[weight=100,label="posiekaj"] 
+  patelnia2->patelnia3
+  orzechy->patelnia3
+  imbir->patelnia3[label="zetrzyj"] 
+  olej2->patelnia3->podsmaz->patelnia4
+  cynamon->patelnia4
+  papryka->patelnia4
+  kumin->patelnia4
+  patelnia4->patelnia5
+
+
+  pojemnik6->patelnia5->patelnia6
+  sos->patelnia6->mieszaj2
+}

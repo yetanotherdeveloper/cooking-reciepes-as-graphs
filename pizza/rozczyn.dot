@@ -1,0 +1,29 @@
+
+digraph G {
+  fontsize=20
+  label="\n\nRozczyn na ciasto do pizzy"
+  {rank=same woda,pojemnik}
+  {rank=same drozdze,pojemnik2}
+  {rank=same miod,pojemnik3}
+  {rank=same maka,pojemnik5}
+  maka[label="maka typ 00 \n(300 gram)"]
+  woda[label="woda (300 ml,\n temperatura pokojowa)"]
+  miod[label="miód (5 gram)"]
+  mieszaj[label="wymieszaj",shape=none]
+  mieszaj2[label="wymieszaj",shape=none]
+  zamknij[label="zamknij pojemnik",shape=none]
+  odstaw[label="trzymaj pojemnik\nprzez 1h w temperaturze pokojowej",shape=none]
+  odstaw2[label="wstaw pojemnik\ndo lodówki na noc\n(16h - 24h)",shape=none]
+  drozdze[label="drożdże (5 gram suszonych\n albo 10 gram swieżych)"]
+  pojemnik[shape=rectangle,label="pojemnik na zaczyn"]
+  woda->pojemnik
+  pojemnik2[shape=rectangle,label="pojemnik z wodą"]
+  pojemnik3[shape=rectangle,label="pojemnik z wodą\ni drożdżami"]
+  pojemnik4[shape=rectangle,label="pojemnik z wodą,\ndrożdżami i miodem"]
+  pojemnik5[shape=rectangle,label="pojemnik z wymieszana\nwodą,drożdżami i miodem"]
+  drozdze->pojemnik2
+  miod->pojemnik3
+  maka->pojemnik5
+  pojemnik->pojemnik2->pojemnik3->pojemnik4->mieszaj->pojemnik5->mieszaj2->zamknij->odstaw->odstaw2
+  
+}

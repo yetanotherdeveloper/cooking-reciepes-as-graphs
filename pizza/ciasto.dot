@@ -1,0 +1,67 @@
+
+digraph G {
+  fontsize=20
+  label="\n\nCiasto na 8 pizze"
+  {rank=same woda,pojemnik}
+  {rank=same rozczyn,pojemnik2}
+  {rank=same maka1,pojemnik4}
+  {rank=same sol,pojemnik5}
+  {rank=same blacha2,pojemnik14}
+  {rank=same maka2,pojemnik6}
+  {rank=same oliwa,pojemnik15}
+  {rank=same folia,pojemnik16}
+  maka1[label="maka typ 00 \n(625 gram)"]
+  maka2[label="maka typ 00 \n(625 gram)"]
+  folia[label="folia spozywcza"]
+  woda[label="woda (700 ml,\n temperatura pokojowa)"]
+  sol[label="sol morska\n(40 gram)"]
+  oliwa[label="oliwa"]
+  rozczyn[label="przygotowany rozczyn"]
+  mieszaj[label="wymieszaj",shape=none]
+  zagniataj[label="zagarniaj, unos i ugniataj prawa reka\naz ciasto jest gladkie i jednorodne",shape=none]
+  zagniataj2[label="Unos dwoma (naoliwionymi)\ndlonmi ciasto i podwijaj\n formujac delikatnie pilke",shape=none]
+  rozposc[label="mieszaj aby  rozpuścić\nrozczyn w wodzie",shape=none]
+  zamknij[label="Zamknij naczynie z ciastem\ni zostaw na 30 min",shape=none]
+  mieszaj2[label="wymieszaj",shape=none]
+  mieszaj3[label="mieszaj az bedzie\njednorodna konsystencja",shape=none]
+  przeloz[label="Przeloz ciasto\nna stolnice",shape=none]
+  przeloz2[label="Przeloz ciasto\ndo naoliwionego pojemnika",shape=none]
+  przeloz3[label="Przeloz ciasto\nna stolnice",shape=none]
+  odstaw[label="Przykryj ciasto i\nzostaw na 15 min",shape=none]
+  formuj[label="Potnij ciasto i\nuformuj kuleczki",shape=none]
+  uloz[label="Uloz kulki 3 cm od\n siebie na blasze",shape=none]
+  naoliw[label="Naoliw szczyt kuleczek ciasta\naby sie folia nie przykleila",shape=none]
+  odstaw3[label="Odstaw na 2h\n w temperaturze pokojowej",shape=none]
+  owin[label="Owin folia blache\n z kulkami ciasta",shape=none]
+  pojemnik[shape=rectangle,label="pojemnik"]
+  woda->pojemnik
+  pojemnik2[shape=rectangle,label="pojemnik z wodą"]
+  pojemnik3[shape=rectangle,label="pojemnik z wodą\ni rozczynem"]
+  pojemnik4[shape=rectangle,label="pojemnik z rozpuszczonym rozczynem"]
+  pojemnik5[shape=rectangle,label="pojemnik z wymieszanymi\nrozpuszczonym rozczynem\n i maka"]
+  pojemnik6[shape=rectangle,label="pojemnik z wymieszanymi \nrozpuszczonym rozczynem\n, maka i sola"]
+  pojemnik7[shape=rectangle,label="Pojemnik z jednorodnym ciastem"]
+  pojemnik8[shape=rectangle,label="Ciasto na stolnicy"]
+  pojemnik9[shape=rectangle,label="Jednorodne, klejace\n ciasto na stolnicy"]
+  pojemnik10[shape=rectangle,label="wypoczete ciasto na stolnicy"]
+  pojemnik11[shape=rectangle,label="Kula ciasta"]
+  pojemnik12[shape=rectangle,label="Ciasto w pojemniku"]
+  pojemnik13[shape=rectangle,label="Ciasto na stolnicy"]
+  pojemnik14[shape=rectangle,label="kulki ciasta"]
+  pojemnik15[shape=rectangle,label="kulki ciasta ulozone\nna blasze"]
+  pojemnik16[shape=rectangle,label="naoliwione kulki ciasta ulozone\nna blasze"]
+  pojemnik17[shape=rectangle,label="owiniete folia\nnaoliwione kulki ciasta ulozone\nna blasze"]
+  blacha[label="Blacha z piekarnika",shape=rectangle]
+  blacha2[label="Blacha wyscielona semolina",shape=rectangle]
+  rozczyn->pojemnik2
+  maka2->pojemnik6
+  maka1->pojemnik4
+  sol->pojemnik5
+  pojemnik->pojemnik2->pojemnik3->rozposc->pojemnik4->mieszaj->pojemnik5->mieszaj2->pojemnik6->mieszaj3->pojemnik7->przeloz->pojemnik8->zagniataj->pojemnik9->odstaw->pojemnik10->zagniataj2->pojemnik11->przeloz2->pojemnik12->zamknij->przeloz3->pojemnik13->formuj->pojemnik14
+semolina->blacha[label="wysciel"]
+blacha->blacha2
+blacha2->pojemnik14
+pojemnik14->uloz->pojemnik15
+oliwa->pojemnik15->naoliw->pojemnik16
+folia->pojemnik16->owin->pojemnik17->odstaw3
+}
