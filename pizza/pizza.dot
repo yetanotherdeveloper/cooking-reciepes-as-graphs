@@ -2,6 +2,7 @@
 digraph G {
   fontsize=40
   label="\n\nWyrabianie Pizzy"
+  URL="https://www.youtube.com/watch?v=G-jPoROGHGE&t=883s"
   {rank=same talerz,maka}
   {rank=same wytnij,pojemnik,talerz2}
   //{rank=same pojemnik2,maka2,obroc,pojemnik3}

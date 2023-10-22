@@ -2,6 +2,7 @@
 digraph G {
   fontsize=20
   label="\n\nRozczyn na ciasto do pizzy"
+  URL="https://www.youtube.com/watch?v=G-jPoROGHGE&t=883s"
   {rank=same woda,pojemnik}
   {rank=same drozdze,pojemnik2}
   {rank=same miod,pojemnik3}
