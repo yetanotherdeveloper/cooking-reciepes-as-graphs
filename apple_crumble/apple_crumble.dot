@@ -1,0 +1,83 @@
+
+digraph G {
+  fontsize=30
+  label="\n\nApple Crumble"
+  {rank=same pojemnik,jablka2}
+  {rank=same pojemnik2,miod}
+  {rank=same pojemnik3,sok}
+  {rank=same miska,maka}
+  {rank=same miska2,sol}
+  {rank=same miska3,maslo}
+  {rank=same miska5,galka}
+  {rank=same miska6,miod2}
+  {rank=same miska7,platki}
+  {rank=same miska8,pojemnik4}
+  {rank=same pojemnik5,piekarnik2}
+  miod[label="Miod\n(1 lyzka stolowa)"] 
+  miod2[label="Miod\n(2 lyzki stolowe)"] 
+  maka[label="Maka\n(175 g)"] 
+  galka[label="Galka muszkaltowa\n(1 cala)",group=g1] 
+  platki[label="Platki owsiane\n(50 g)"] 
+  maslo[label="Maslo\n(niesolone, 150 g)"] 
+  sol[label="Sol morska\n(1/4 lyzki stolowej)"] 
+  jablka[label="Jablka\n(1.2 kg)"] 
+  jablka2[label="Jablka w kawalkach"] 
+  sok[label="Sok z cytryny\n(wycisniety z polowy cytryny)"] 
+  mieszaj[label="wymieszaj",shape=none] 
+  obierz[label="Obierz",shape=none] 
+  przesiewaj[label="Przesiewaj rekoma\naz miksutra bedzie przypominala\ntarta bulke",shape=none] 
+  usun_nasiona[label="Usun komore nasienna",shape=none] 
+  pokroj[label="Pokroj na kawalki",shape=none] 
+  piecz[label="piecz 50 min \n(az posypka jest ciemno-zlota\ni owoce babelkuja)"]
+  pojemnik[label="Pusty pojemnik",shape=rectrangle]
+  pojemnik2[label="Pojemnik jablkami",shape=rectrangle]
+  pojemnik3[label="Pojemnik jablkami\n i miodem",shape=rectrangle]
+  pojemnik4[label="Pojemnik jablkami,\nmiodem i sokiem z cytryny",shape=rectrangle]
+  pojemnik5[label="Pojemnik surowa\nkruszonka z jablkami",shape=rectrangle]
+  piekarnik[label="Piekarnik",shape=rectrangle]
+  piekarnik2[label="Piekarnik rozgrzany do 190 stopni",shape=rectrangle]
+  piekarnik3[label="Gotowa kruszonka z jablkami",shape=rectrangle]
+
+
+  miska[label="Pusta miska\n(duza)",shape=rectrangle]
+  miska2[label="Miska z maka",shape=rectrangle]
+  miska3[label="Miska z maka i sola",shape=rectrangle]
+  miska4[label="Miska z maka, sola i maslem",shape=rectrangle]
+  miska5[label="Miska z mikstura",shape=rectrangle,group=g1]
+  miska6[label="Miska z mikstura i galka muszkaltowa",shape=rectrangle]
+  miska7[label="Miska z mikstura,\n galka muszkaltowa i miodem",shape=rectrangle]
+  miska8[label="Miska z posypka z kruszonki",shape=rectrangle]
+
+  piekarnik->piekarnik2[label="Rozgrzej do 190 stopni"]
+
+  jablka->obierz->pokroj->usun_nasiona->jablka2
+  jablka2->pojemnik[label="Rozloz rownomiernie"]
+  pojemnik->pojemnik2
+  miod->pojemnik2[label="wmieszaj"]
+  pojemnik2->pojemnik3[weight=100]
+  sok->pojemnik3[label="skrop"]
+  pojemnik3->pojemnik4
+
+  maka->miska[label="przesiej"]
+  miska->miska2
+  sol->miska2[label="rozprowadz rownomiernie"]
+  miska2->miska3
+
+  maslo->miska3[label="pokroj w kosteczki"]
+  miska3->miska4->przesiewaj->miska5
+  galka->miska5[label="zetrzyj"]
+  miska5->miska6 
+  miod2->miska6[label="wmieszaj"]
+  miska6->miska7
+  platki->miska7[label="wmieszaj"]
+  miska7->miska8
+
+  miska8->pojemnik4[label="Rozprowadz rownomiernie\n na powierzchni"]
+  pojemnik4->pojemnik5
+  
+  pojemnik5->piekarnik2[label="wloz"]
+  piekarnik2->piecz->piekarnik3
+
+  
+  
+}
