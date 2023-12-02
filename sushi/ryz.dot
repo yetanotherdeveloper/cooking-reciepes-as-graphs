@@ -27,7 +27,6 @@ digraph G {
   wylej2[label="wylej wode",shape=none]
   podgrzej[label="postaw na malym ogniu",shape=none]
   metna[label="Czy woda jest metna?",shape=diamond]
-  zamknij[label="zamknij pojemnik",shape=none]
   ostodz[label="zdejmij z kuchenki i\nzostaw do ostudzenia",shape=none]
   czekaj[label="poczekaj az wystygnie",shape=none]
   odstaw[label="Odstaw na 30 min",shape=none]
