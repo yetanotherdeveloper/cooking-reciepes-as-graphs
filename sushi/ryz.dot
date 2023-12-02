@@ -29,6 +29,7 @@ digraph G {
   metna[label="Czy woda jest metna?",shape=diamond]
   zamknij[label="zamknij pojemnik",shape=none]
   ostodz[label="zdejmij z kuchenki i\nzostaw do ostudzenia",shape=none]
+  czekaj[label="poczekaj az wystygnie",shape=none]
   odstaw[label="Odstaw na 30 min",shape=none]
   gotuj1[label="Doprowadz do wrzenia\n(Gotuj pod przykryciem)",shape=none]
   gotuj2[label="Gotuj na minimalnym ogniu\n(13 min)",shape=none]
@@ -50,6 +51,7 @@ digraph G {
   miska[shape=rectangle,label="Miska\n(drewniana)"]
   miska2[shape=rectangle,label="Miska z ryzem"]
   miska3[shape=rectangle,label="Miska z wymieszanym ryzem"]
+  miska4[shape=rectangle,label="Miska z wystygnietym ryzem"]
   woda->pojemnik2[label="zalej"]
   pojemnik->pojemnik2->pojemnik3->mieszaj->metna
   metna->wylej[label="tak"]
@@ -69,7 +71,8 @@ digraph G {
   garnek2->gotuj1->gotuj2->gotuj3->garnek3
   garnek3->miska[label="przeloz"]
   miska->miska2->wymieszaj->miska3
-  patelnia5->miska3[label="polej i mieszaj"]
+  patelnia5->miska3[label="polej i mieszaj\n(Zostaw troche do\n pozniejszego podlania gdyby wysechl)"]
+  miska3->czekaj->miska4
   
 // Odcedz , 3:44 w filmie
 }
