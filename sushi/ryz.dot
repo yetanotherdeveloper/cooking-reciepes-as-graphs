@@ -1,0 +1,75 @@
+
+digraph G {
+  fontsize=20
+  label="\n\nRyz do sushi"
+  URL="https://www.youtube.com/watch?v=l3D-AV_AYyo&t=226s"
+  {rank=same ryz,pojemnik}
+  {rank=same woda,pojemnik2}
+  {rank=same woda2,pojemnik4}
+  {rank=same odcedz,pojemnik5,garnek}
+  {rank=same odstaw,ocet,patelnia}
+  {rank=same miod,patelnia2}
+  {rank=same woda3,garnek2}
+  {rank=same sol,patelnia3}
+  {rank=same garnek3,miska}
+  {rank=same patelnia5,miska3}
+  ryz[label="Szklanka ryzu"]
+  woda[label="zimna woda"]
+  woda2[label="zimna woda"]
+  woda3[label="woda \n(3/4 szklanki)"]
+  miod[label="miod\n(2 lyzki stolowe)"]
+  ocet[label="ocet ryzowy\n(6 lyzek stolowych)"]
+  sol[label="sol\n(1 lyzeczka)"]
+  mieszaj[label="wymieszaj reka",shape=none]
+  wymieszaj[label="wymieszaj",shape=none]
+  mieszaj3[label="mieszaj do polaczenia\n skladnikow\n(ale nie zagotuj)",shape=none]
+  wylej[label="wylej wode",shape=none]
+  wylej2[label="wylej wode",shape=none]
+  podgrzej[label="postaw na malym ogniu",shape=none]
+  metna[label="Czy woda jest metna?",shape=diamond]
+  zamknij[label="zamknij pojemnik",shape=none]
+  ostodz[label="zdejmij z kuchenki i\nzostaw do ostudzenia",shape=none]
+  odstaw[label="Odstaw na 30 min",shape=none]
+  gotuj1[label="Doprowadz do wrzenia\n(Gotuj pod przykryciem)",shape=none]
+  gotuj2[label="Gotuj na minimalnym ogniu\n(13 min)",shape=none]
+  gotuj3[label="wylacz grzanie \n(ryz odpoczywa 15 min)",shape=none]
+  patelnia[shape=rectangle,label="patelnia"]
+  patelnia2[shape=rectangle,label="patelnia z octem"]
+  patelnia3[shape=rectangle,label="patelnia z octem i miodem"]
+  patelnia4[shape=rectangle,label="patelnia z octem,\n miodem i sola"]
+  patelnia5[shape=rectangle,label="patelnia z zaprawa do ryzu"]
+  pojemnik[shape=rectangle,label="pojemnik na ryz"]
+  ryz->pojemnik
+  pojemnik2[shape=rectangle,label="pojemnik z ryzem"]
+  pojemnik3[shape=rectangle,label="pojemnik z \nwoda i ryzem"]
+  pojemnik4[shape=rectangle,label="pojemnik z wyplukanym ryzem"]
+  pojemnik5[shape=rectangle,label="pojemnik z namoczonym ryzem"]
+  garnek[shape=rectangle,label="Garnek do gotowania"]
+  garnek2[shape=rectangle,label="Garnek z ryzem"]
+  garnek3[shape=rectangle,label="Garnek z ugotowanym ryzem"]
+  miska[shape=rectangle,label="Miska\n(drewniana)"]
+  miska2[shape=rectangle,label="Miska z ryzem"]
+  miska3[shape=rectangle,label="Miska z wymieszanym ryzem"]
+  woda->pojemnik2[label="zalej"]
+  pojemnik->pojemnik2->pojemnik3->mieszaj->metna
+  metna->wylej[label="tak"]
+  metna->wylej2[label="nie"]
+  wylej->pojemnik2
+  wylej2->pojemnik4
+  woda2->pojemnik4[label="zalej"] 
+  pojemnik4->odstaw->pojemnik5
+  ocet->patelnia
+  miod->patelnia2
+  sol->patelnia3->patelnia4
+  patelnia->patelnia2->patelnia3
+  patelnia4->podgrzej->mieszaj3->ostodz->patelnia5
+  pojemnik5->garnek[label="Odcedz i przeloz"]
+  garnek->garnek2
+  woda3->garnek2[label="zalej (tak by woda\n zakrywala ryz)"]
+  garnek2->gotuj1->gotuj2->gotuj3->garnek3
+  garnek3->miska[label="przeloz"]
+  miska->miska2->wymieszaj->miska3
+  patelnia5->miska3[label="polej i mieszaj"]
+  
+// Odcedz , 3:44 w filmie
+}
