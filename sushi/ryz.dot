@@ -6,7 +6,7 @@ digraph G {
   {rank=same ryz,pojemnik}
   {rank=same woda,pojemnik2}
   {rank=same woda2,pojemnik4}
-  {rank=same odcedz,pojemnik5,garnek}
+  {rank=same pojemnik5,garnek}
   {rank=same odstaw,ocet,patelnia}
   {rank=same miod,patelnia2}
   {rank=same woda3,garnek2}
@@ -17,7 +17,7 @@ digraph G {
   woda[label="zimna woda"]
   woda2[label="zimna woda"]
   woda3[label="woda \n(3/4 szklanki)"]
-  miod[label="miod\n(2 lyzki stolowe)"]
+  miod[label="miod\n(1 lyzka stolowa)"]
   ocet[label="ocet ryzowy\n(6 lyzek stolowych)"]
   sol[label="sol\n(1 lyzeczka)"]
   mieszaj[label="wymieszaj reka",shape=none]
