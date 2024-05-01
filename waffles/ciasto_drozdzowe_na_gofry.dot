@@ -1,7 +1,7 @@
 
 digraph G {
   fontsize=20
-  label="\n\nGofry"
+  label="\n\nCiasto drożdżowe na Gofry"
   URL="https://www.kwestiasmaku.com/przepis/gofry"
   {rank=same mleko,garnek}
   {rank=same maslo,garnek2}
