@@ -1,0 +1,45 @@
+
+digraph G {
+  fontsize=20
+  label="\n\nGofry"
+  URL="https://www.kwestiasmaku.com/przepis/gofry"
+  {rank=same mleko,garnek}
+  {rank=same maslo,garnek2}
+  {rank=same jajka,pojemnik}
+  {rank=same drozdze,pojemnik2}
+  {rank=same miod,pojemnik3}
+  {rank=same sol,pojemnik4}
+  {rank=same maka,pojemnik5}
+  maka[label="maka pszenna \n(300 gram)"]
+  maslo[label="maslo\n(100 gram,pokrojone w kosteczki)"]
+  mleko[label="mleko (500 ml)"]
+  jajka[label="dwa jajka"]
+  sol[label="szczypta soli"]
+  miod[label="Miod\n(1 łyżka)"]
+  drozdze[label="drozdze\n(15 gram swieze\nlub 7 gram suche)"]
+
+  mieszaj[label="podgrzej i mieszaj\n az maslo sie rozpusci\n(na malym ogniu)",shape=none]
+  mieszaj2[label="wymieszaj",shape=none]
+  mieszaj3[label="wymieszaj",shape=none]
+  zamknij[label="Zamknij naczynie z ciastem\ni zostaw na 60 min",shape=none]
+  mieszaj2[label="wymieszaj",shape=none]
+  garnek[shape=rectangle,label="garnek"]
+  garnek2[shape=rectangle,label="garnek z mlekiem"]
+  garnek3[shape=rectangle,label="garnek z rozpuszczonym\n masłem w mleku"]
+  pojemnik[shape=rectangle,label="pojemnik"]
+  pojemnik2[shape=rectangle,label="Pojemnik z wymieszanymi\n jajkami z rozpuszczonym masłem"]
+  pojemnik3[shape=rectangle,label="Pojemnik z mieszaniną\n i drożdżami"]
+  pojemnik4[shape=rectangle,label="Pojemnik z mieszaniną,\n drożdżami i miodem"]
+  pojemnik5[shape=rectangle,label="Pojemnik z wymieszanymi składnikami"]
+  pojemnik6[shape=rectangle,label="Pojemnik z wymieszanym ciastem"]
+  mleko->garnek
+  garnek->garnek2
+  maslo->garnek2->mieszaj->garnek3
+  garnek3->pojemnik[label=przełóż]
+  jajka->pojemnik->mieszaj2->pojemnik2
+  drozdze->pojemnik2->pojemnik3
+  miod->pojemnik3->pojemnik4 
+  sol->pojemnik4
+  pojemnik4->pojemnik5[label="wymieszaj"]
+  maka->pojemnik5->mieszaj3->pojemnik6->zamknij
+}
