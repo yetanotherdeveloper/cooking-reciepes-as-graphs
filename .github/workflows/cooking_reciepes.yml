@@ -34,6 +34,8 @@ jobs:
       - name: Render cooking reciepes
         run: |
           mkdir reciepes
+          pwd
+          ls
           for file in `find ./ -name "*.dot" `; do dot -Tpng "$file" -o "reciepes/${file}.png"; done
           
       - name: Commit generated PNG files
