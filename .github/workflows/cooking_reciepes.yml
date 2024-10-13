@@ -33,6 +33,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Render cooking reciepes
         run: |
+          mkdir reciepes
           for file in `find ./ -name "*.dot" `; do dot -Tpng "$file" -o "reciepes/${file}.png"; done
           
       - name: Commit generated PNG files
