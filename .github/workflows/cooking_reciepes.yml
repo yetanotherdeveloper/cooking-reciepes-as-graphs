@@ -33,10 +33,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Render cooking reciepes
         run: |
-          mkdir reciepes
+          [ ! -d "reciepes" ] && mkdir "reciepes"
           pwd
           ls
-          for file in `find ./ -name "*.dot" `; do [ ! -d  `dirname "$file"` ] && mkdir `dirname "$file"` && dot -Tpng "$file" -o "reciepes/${file}.png"; done
+          for file in `find ./ -name "*.dot" `; do [ ! -d  "reciepes/"`dirname "$file"` ] && mkdir "reciepes/"`dirname "$file"` && dot -Tpng "$file" -o "reciepes/${file}.png"; done
           
       - name: Commit generated PNG files
         run: |
