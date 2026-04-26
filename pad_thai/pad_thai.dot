@@ -1,0 +1,74 @@
+digraph G {
+  fontsize=30
+  label="\n\nPad Thai"
+  
+  wok[label="Wok",shape=rectangle]
+  oil[label="Cooking oil\n(2 tbsp)"]
+  wok_heated[label="Wok with heated oil",shape=rectangle]
+  
+  tofu[label="Firm tofu\n(20 g)"]
+  tofu_sliced[label="Sliced tofu",shape=none]
+  shallot[label="Chopped shallot\n(1 tsp)"]
+  chicken[label="Sliced chicken\n(30 g)"]
+  wok1[label="Wok with fried tofu",shape=rectangle]
+  wok2[label="Wok with fried tofu,\nshallot and chicken",shape=rectangle]
+  
+  egg[label="Egg\n(1)"]
+  wok3[label="Wok with cooked egg",shape=rectangle]
+  
+  noodles[label="Narrow rice noodles\n(50 g)"]
+  shrimp[label="Dried shrimp\n(1 tsp)"]
+  radish[label="Pickled radish\n(1 tsp)"]
+  water[label="Water\n(1/4 cup)"]
+  wok4[label="Wok with noodles,\nshrimp and radish",shape=rectangle]
+  
+  oyster[label="Oyster sauce\n(1 tbsp)"]
+  fish[label="Fish sauce\n(1 tbsp)"]
+  tamarind[label="Tamarind sauce\n(1 tsp)"]
+  honey[label="Honey\n(2 tsp)"]
+  wok5[label="Wok with seasoned\nand tender noodles",shape=rectangle]
+  
+  sprouts[label="Bean sprouts\n(30 g)"]
+  chives[label="Chinese chives\n(10 g, cut 3cm)"]
+  final[label="Finished Pad Thai",shape=rectangle]
+  
+  {rank=same oil wok}
+  oil -> wok
+  wok -> wok_heated[label="heating"]
+  
+  {rank=same tofu tofu_sliced wok_heated}
+  tofu -> tofu_sliced[label="Slice"]
+  tofu_sliced -> wok_heated[label="Fry"]
+  wok_heated -> wok1[label="fry till brownish"]
+
+  {rank=same shallot chicken wok1}
+  shallot -> wok1
+  chicken -> wok1
+  wok1 -> wok2[label="fry till prawns are pinkish"]
+  
+  {rank=same egg wok2}
+  egg -> wok2[label="Break in\nand turn over"]
+  wok2 -> wok3[label=""]
+  
+  {rank=same noodles shrimp radish water wok3}
+  noodles -> wok3[label=""]
+  shrimp -> wok3[label=""]
+  radish -> wok3[label=""]
+  water -> wok3[label=""]
+  wok3 -> wok4[label="stir well"]
+  
+  {rank=same oyster fish tamarind honey wok4}
+  oyster -> wok4[label=""]
+  fish -> wok4[label=""]
+  tamarind -> wok4[label=""]
+  honey -> wok4[label=""]
+  wok4 -> wok5[label="stir until tender"]
+  
+  {rank=same sprouts chives wok5}
+  sprouts -> wok5[label=""]
+  chives -> wok5[label=""]
+  wok5 -> final[label="stir well"]
+  
+  {constraint=false; wok_heated -> wok1 -> wok2 -> wok3 -> wok4 -> wok5->final [style=invis]}
+  
+}
