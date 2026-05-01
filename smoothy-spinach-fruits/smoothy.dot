@@ -7,13 +7,13 @@ digraph G {
   platki[label="Platki owsiane\n(20 g)"] 
   banan[label="Banan\n(1 duzy lub dwa male)"] 
   szpinak[label="Szpinak\n(dwie garscie)"] 
-  pojemnik[label="Pusty pojemnik\n do blendera",shape=rectrangle]
-  pojemnik2[label="Pojemnik ze szpinakiem",shape=rectrangle]
-  pojemnik3[label="Pojemnik ze szpinakiem\n i miodem",shape=rectrangle]
-  pojemnik4[label="Pojemnik ze szpinakiem,\nmiodem i bananem",shape=rectrangle]
-  pojemnik5[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami",shape=rectrangle]
-  pojemnik6[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami jogurtem",shape=rectrangle]
-  pojemnik7[label="Pojemnik ze zblendowanymi skladnikami\n(smoothy)",shape=rectrangle]
+  pojemnik[label="Pusty pojemnik\n do blendera",shape=rectangle]
+  pojemnik2[label="Pojemnik ze szpinakiem",shape=rectangle]
+  pojemnik3[label="Pojemnik ze szpinakiem\n i miodem",shape=rectangle]
+  pojemnik4[label="Pojemnik ze szpinakiem,\nmiodem i bananem",shape=rectangle]
+  pojemnik5[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami",shape=rectangle]
+  pojemnik6[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami jogurtem",shape=rectangle]
+  pojemnik7[label="Pojemnik ze zblendowanymi skladnikami\n(smoothy)",shape=rectangle]
 
   {rank=same pojemnik,szpinak}
   {rank=same pojemnik2,miod}
