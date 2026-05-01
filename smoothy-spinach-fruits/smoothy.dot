@@ -1,0 +1,36 @@
+
+digraph G {
+  fontsize=30
+  label="\n\nSmoothy szpinakowo-owocowe"
+  miod[label="Miod\n(1 lyzka stolowa)"] 
+  jogurt[label="Jogurt naturalny\n(350 gram)"] 
+  platki[label="Platki owsiane\n(20 g)"] 
+  banan[label="Banan\n(1 duzy lub dwa male)"] 
+  szpinak[label="Szpinak\n(dwie garscie)"] 
+  pojemnik[label="Pusty pojemnik\n do blendera",shape=rectrangle]
+  pojemnik2[label="Pojemnik ze szpinakiem",shape=rectrangle]
+  pojemnik3[label="Pojemnik ze szpinakiem\n i miodem",shape=rectrangle]
+  pojemnik4[label="Pojemnik ze szpinakiem,\nmiodem i bananem",shape=rectrangle]
+  pojemnik5[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami",shape=rectrangle]
+  pojemnik6[label="Pojemnik ze szpinakiem,\nmiodem, bananem\n i platkami jogurtem",shape=rectrangle]
+  pojemnik7[label="Pojemnik ze zblendowanymi skladnikami\n(smoothy)",shape=rectrangle]
+
+  {rank=same pojemnik,szpinak}
+  {rank=same pojemnik2,miod}
+  {rank=same pojemnik3,banan}
+  {rank=same pojemnik4,platki}
+  {rank=same pojemnik5,jogurt}
+
+  szpinak->pojemnik[label="Oplukaj"]
+  pojemnik->pojemnik2
+  miod->pojemnik2
+  pojemnik2->pojemnik3
+  banan->pojemnik3[label="obierz i pokroj"]
+  pojemnik3->pojemnik4
+  platki->pojemnik4
+  pojemnik4->pojemnik5
+  jogurt->pojemnik5
+  pojemnik5->pojemnik6
+  pojemnik6->pojemnik7[label="blenduj"]
+  
+}
