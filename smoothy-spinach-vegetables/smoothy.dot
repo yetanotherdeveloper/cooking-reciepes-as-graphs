@@ -1,0 +1,39 @@
+
+digraph G {
+  fontsize=30
+  label="\n\nSmoothy szpinakowo-warzywne"
+  sol[label="sol\n(1 lyzeczka)"] 
+  jogurt[label="Jogurt naturalny\n(350 gram)"] 
+  orzechy[label="orzechy ziemne\n(50 g)"] 
+  woda[label="Woda\n(200 ml)"] 
+  szpinak[label="Szpinak\n(dwie garscie)"] 
+  awokado[label="Awokado\n(Jedna sztuka)"] 
+  pojemnik[label="Pusty pojemnik\n do blendera",shape=rectangle]
+  pojemnik2[label="Pojemnik z\n zblendowanymi orzechami",shape=rectangle]
+  pojemnik3[label="Pojemnik z\n zblendowanymi orzechami\n i sola",shape=rectangle]
+  pojemnik4[label="Pojemnik z\n zblendowanymi orzechami\nsola i szpinakiem",shape=rectangle]
+  pojemnik5[label="Pojemnik z\n zblendowanymi orzechami\nsola, szpinakiem\ni awokado",shape=rectangle]
+  pojemnik6[label="Pojemnik z\n zblendowanymi orzechami\nsola, szpinakiem\nawokado i jogurtem",shape=rectangle]
+  pojemnik7[label="Pojemnik ze zblendowanymi skladnikami\n(smoothy)",shape=rectangle]
+
+  {rank=same pojemnik,orzechy}
+  {rank=same pojemnik2,sol}
+  {rank=same pojemnik3,szpinak}
+  {rank=same pojemnik4,awokado}
+  {rank=same pojemnik5,jogurt}
+  {rank=same pojemnik6,woda}
+
+  orzechy->pojemnik[label="obierz z lupinek"]
+  pojemnik->pojemnik2[label="zblenduj"]
+  sol->pojemnik2
+  pojemnik2->pojemnik3
+  szpinak->pojemnik3[label="oplocz"]
+  pojemnik3->pojemnik4
+  awokado->pojemnik4[label="obierz i pokroj"]
+  pojemnik4->pojemnik5
+  jogurt->pojemnik5
+  pojemnik5->pojemnik6
+  woda->pojemnik6
+  pojemnik6->pojemnik7[label="blenduj"]
+  
+}
