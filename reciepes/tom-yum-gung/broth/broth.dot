@@ -1,0 +1,52 @@
+
+digraph G {
+  fontsize=20
+  label="\n\nBulion (warzywny) na zupe"
+  URL="https://aniastarmach.pl/bulion-warzywny/"
+  {rank=same garnek,marchew}
+  {rank=same garnek2,pietruszka}
+  {rank=same garnek3,seler}
+  {rank=same garnek4,por}
+  {rank=same garnek5,cebula}
+  {rank=same garnek7,lisc}
+  {rank=same garnek8,ziele}
+  {rank=same garnek9,woda}
+  woda[label="zimna woda\n(2 litry)"]
+  marchew[label="Marchew\n(2 sztuki, obrane\n i pokrojone)"]
+  seler[label="Seler\n(polowa, obrany\n i pokrojony)"]
+  pietruszka[label="Pietruszka\n(2 korzenie, obrane\n i pokrojone)"]
+  por[label="Por\n(1 sztuka)"]
+  cebula[label="Cebula\n(1 sztuka, pokrojona,\n opalona na patelnie)"]
+  lisc[label="Lisc laurowy\n(1 sztuka)"]
+  ziele[label="Ziele angielskie\n(2 ziarna)"]
+
+  gotuj[label="Gotuj na malym \n(4 na mojej kuchence) ogniu\n pod przykryciem\n(90 - 120 min)",shape=none]
+  garnek[shape=rectangle,label="Garnek do gotowania"]
+  garnek2[shape=rectangle,label="Garnek z marchwia"]
+  garnek3[shape=rectangle,label="Garnek z marchwia\n i pietruszka"]
+  garnek4[shape=rectangle,label="Garnek z marchwia,\npietruszka i selerem"]
+  garnek5[shape=rectangle,label="Garnek z marchwia,\npietruszka, selerem\ni porem"]
+  garnek7[shape=rectangle,label="Garnek z warzywami"]
+  garnek8[shape=rectangle,label="Garnek z warzywami\ni lisciem laurowym"]
+  garnek9[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim i\nlisciem laurowym"]
+  garnek10[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym i\n woda"]
+  garnek11[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym i\n wrzaca woda"]
+ 
+  marchew->garnek
+  garnek->garnek2 
+  pietruszka->garnek2
+  garnek2->garnek3
+  seler->garnek3
+  garnek3->garnek4 
+  por->garnek4
+  garnek4->garnek5
+  cebula->garnek5
+  garnek5->garnek7
+  lisc->garnek7
+  garnek7->garnek8
+  ziele->garnek8
+  garnek8->garnek9
+  woda->garnek9->garnek10
+  garnek10->garnek11[label="Doprowadz do wrzenia"]
+  garnek11->gotuj
+}
