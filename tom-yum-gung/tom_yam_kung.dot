@@ -1,0 +1,59 @@
+
+digraph G {
+  fontsize=20
+  label="Zupa Tom Yam Kung"
+  {rank=same garnek,bulion}
+  {rank=same garnek3,trawa}
+  {rank=same garnek4,kaffir}
+  {rank=same garnek5,cebula}
+  {rank=same garnek7,grzyby}
+  {rank=same garnek8,krewetki}
+  {rank=same garnek9,pomidory}
+  {rank=same garnek10,sos_rybny,sok_z_limonki,miod,chilli}
+  bulion[label="bulion\n(1 szklanka)"]
+  krewetki[label="krewetki\n(rozmrozone, 50g)"]
+  trawa[label="Trawa cytrynowa\n(2-3 kawalki)"]
+  kaffir[label="Liscie limonki\n(1-2 liscie)"]
+  grzyby[label="Grzyby shitake\n(pokrojone)"]
+  cebula[label="Cebula\n(1 sztuka, pokrojona,\n opalona na patelnie)"]
+  pomidory[label="Pomidory\n(2 sztuki,\n pokrojone w cwiartke)"]
+  sos_rybny[label="Sos rybny\n(1 lyzka stolowa)"]
+  sok_z_limonki[label="Sok z limonki\n(1 lyzka stolowa)"]
+  miod[label="Miod\n(1 lyzka stolowa)"]
+  chilli[label="Chili\n(1 posiekane)"]
+
+  garnek[shape=rectangle,label="Garnek do gotowania"]
+  garnek2[shape=rectangle,label="Garnek z bulionem"]
+  garnek3[shape=rectangle,label="Garnek z zagotowanym bulionem"]
+  garnek4[shape=rectangle,label="Garnek z zagotowanym bulionem\n i trawa cytrynowa"]
+  garnek5[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa i\n liscmi z limonki"]
+  garnek7[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ni cebula"]
+  garnek8[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ncebula\ni grzybami"]
+  garnek9[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ncebula\ngrzybami\n i krewetkami"]
+  garnek10[shape=rectangle,label="Garnek z zagotowanym bulionem\ i skladnikami"]
+  garnek11[shape=rectangle,label="Garnek z zagotowanym bulionem\ \nskladnikami i przyprawami"]
+  garnek12[shape=rectangle,label="zupa"]
+ 
+  bulion->garnek
+  garnek->garnek2 
+  garnek2->garnek3[label="zagotuj"]
+  trawa->garnek3
+  garnek3->garnek4 
+  kaffir->garnek4
+  garnek4->garnek5[label="gotuj na malym ogniu\n(poziom 5 na mojej kuchence)\n przez kilka minut"]
+
+  cebula->garnek5
+  garnek5->garnek7
+  grzyby->garnek7
+  garnek7->garnek8[label="zamieszaj delikatnie\n i gotuj przez 2-3 minuty"]
+  krewetki->garnek8
+  garnek8->garnek9
+  pomidory->garnek9->garnek10
+  sos_rybny->garnek10
+  sok_z_limonki->garnek10
+  miod->garnek10
+  chilli->garnek10
+  garnek10->garnek11
+  garnek11->garnek12[label="wymieszaj"]
+
+}
