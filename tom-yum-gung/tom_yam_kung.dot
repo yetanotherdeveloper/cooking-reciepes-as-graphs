@@ -40,7 +40,7 @@ digraph G {
   trawa->garnek3
   garnek3->garnek4 
   kaffir->garnek4
-  garnek4->garnek5[label="gotuj na malym ogniu\n(poziom 5 na mojej kuchence)\n przez kilka minut"]
+  garnek4->garnek5[label="gotuj na srednim ogniu\n(poziom 8 na mojej kuchence)\n przez kilka minut"]
 
   cebula->garnek5
   garnek5->garnek7
@@ -55,6 +55,6 @@ digraph G {
   miod->garnek10
   chilli->garnek10
   garnek10->garnek11
-  garnek11->garnek12[label="wymieszaj"]
+  garnek11->garnek12[label="wylacz grzanie i wymieszaj"]
 
 }
