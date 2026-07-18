@@ -32,9 +32,9 @@ digraph G {
   garnek9[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ncebula\ngrzybami\n i krewetkami"]
   garnek10[shape=rectangle,label="Garnek z zagotowanym bulionem\ i skladnikami"]
   garnek11[shape=rectangle,label="Garnek z zagotowanym bulionem\ \nskladnikami i przyprawami"]
-  garnek12[shape=rectangle,label="zupa"]
+  garnek12[shape=rectangle,label="Gotowa zupa Tom Yam Kung"]
  
-  bulion->garnek
+  bulion->garnek[label="odcedz"]
   garnek->garnek2 
   garnek2->garnek3[label="zagotuj"]
   trawa->garnek3
@@ -48,7 +48,8 @@ digraph G {
   garnek7->garnek8[label="zamieszaj delikatnie\n i gotuj przez 2-3 minuty"]
   krewetki->garnek8
   garnek8->garnek9
-  pomidory->garnek9->garnek10
+  pomidory->garnek9
+  garnek9->garnek10[label="gotuj przez 2-3 minuty"]
   sos_rybny->garnek10
   sok_z_limonki->garnek10
   miod->garnek10
