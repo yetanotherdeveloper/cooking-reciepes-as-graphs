@@ -1,7 +1,7 @@
 
 digraph G {
   fontsize=20
-  label="\n\nBulion (warzywny) na zupe"
+  label="\n\nBulion na zupe"
   URL="https://aniastarmach.pl/bulion-warzywny/"
   {rank=same garnek,marchew}
   {rank=same garnek2,pietruszka}
@@ -10,7 +10,8 @@ digraph G {
   {rank=same garnek5,cebula}
   {rank=same garnek7,lisc}
   {rank=same garnek8,ziele}
-  {rank=same garnek9,woda}
+  {rank=same garnek9,pancerzyki}
+  {rank=same garnek10,woda}
   woda[label="zimna woda\n(2 litry)"]
   marchew[label="Marchew\n(2 sztuki, obrane\n i pokrojone)"]
   seler[label="Seler\n(polowa, obrany\n i pokrojony)"]
@@ -19,6 +20,7 @@ digraph G {
   cebula[label="Cebula\n(1 sztuka, pokrojona,\n opalona na patelnie)"]
   lisc[label="Lisc laurowy\n(1 sztuka)"]
   ziele[label="Ziele angielskie\n(2 ziarna)"]
+  pancerzyki[label="Pancerzyki krewetek\n(garść)"]
 
   gotuj[label="Gotuj na malym \n(4 na mojej kuchence) ogniu\n pod przykryciem\n(90 - 120 min)",shape=none]
   garnek[shape=rectangle,label="Garnek do gotowania"]
@@ -29,8 +31,9 @@ digraph G {
   garnek7[shape=rectangle,label="Garnek z warzywami"]
   garnek8[shape=rectangle,label="Garnek z warzywami\ni lisciem laurowym"]
   garnek9[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim i\nlisciem laurowym"]
-  garnek10[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym i\n woda"]
-  garnek11[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym i\n wrzaca woda"]
+  garnek10[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym i\n pancerzykami"]
+  garnek11[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym,\n pancerzykami i woda"]
+  garnek12[shape=rectangle,label="Garnek z warzywami,\nzielem angielskim,\nlisciem laurowym,\n pancerzykami i\n wrzącą woda"]
  
   marchew->garnek
   garnek->garnek2 
@@ -46,7 +49,8 @@ digraph G {
   garnek7->garnek8
   ziele->garnek8
   garnek8->garnek9
-  woda->garnek9->garnek10
-  garnek10->garnek11[label="Doprowadz do wrzenia"]
-  garnek11->gotuj
+  pancerzyki->garnek9->garnek10
+  woda->garnek10->garnek11
+  garnek11->garnek12[label="Doprowadz do wrzenia"]
+  garnek12->gotuj
 }

@@ -10,16 +10,16 @@ digraph G {
   {rank=same garnek8,krewetki}
   {rank=same garnek9,pomidory}
   {rank=same garnek10,sos_rybny,sok_z_limonki,miod,chilli}
-  bulion[label="bulion\n(1 szklanka)"]
-  krewetki[label="krewetki\n(rozmrozone, 50g)"]
-  trawa[label="Trawa cytrynowa\n(2-3 kawalki)"]
-  kaffir[label="Liscie limonki\n(1-2 liscie)"]
+  bulion[label="bulion\n(1 litr)"]
+  krewetki[label="krewetki\n(rozmrożone, 200g)"]
+  trawa[label="Trawa cytrynowa\n(8-9 kawałki)"]
+  kaffir[label="Liście limonki\n(4-5 liści)"]
   grzyby[label="Grzyby shitake\n(pokrojone)"]
   cebula[label="Cebula\n(1 sztuka, pokrojona,\n opalona na patelnie)"]
-  pomidory[label="Pomidory\n(2 sztuki,\n pokrojone w cwiartke)"]
-  sos_rybny[label="Sos rybny\n(1 lyzka stolowa)"]
-  sok_z_limonki[label="Sok z limonki\n(1 lyzka stolowa)"]
-  miod[label="Miod\n(1 lyzka stolowa)"]
+  pomidory[label="Pomidory\n(2 duże sztuki,\n pokrojone w ćwiartkę)"]
+  sos_rybny[label="Sos rybny\n(2 łyżka stołowa)"]
+  sok_z_limonki[label="Sok z limonki\n(2 łyżki stołowe)"]
+  miod[label="Miod\n(2 łyżki stołowe)"]
   chilli[label="Chili\n(1 posiekane)"]
 
   garnek[shape=rectangle,label="Garnek do gotowania"]
@@ -30,17 +30,17 @@ digraph G {
   garnek7[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ni cebula"]
   garnek8[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ncebula\ni grzybami"]
   garnek9[shape=rectangle,label="Garnek z zagotowanym bulionem\ntrawa cytrynowa \n liscmi z limonki\ncebula\ngrzybami\n i krewetkami"]
-  garnek10[shape=rectangle,label="Garnek z zagotowanym bulionem\ i skladnikami"]
-  garnek11[shape=rectangle,label="Garnek z zagotowanym bulionem\ \nskladnikami i przyprawami"]
+  garnek10[shape=rectangle,label="Garnek z zagotowanym bulionem\ i składnikami"]
+  garnek11[shape=rectangle,label="Garnek z zagotowanym bulionem\ \składnikami i przyprawami"]
   garnek12[shape=rectangle,label="Gotowa zupa Tom Yam Kung"]
  
-  bulion->garnek[label="odcedz"]
+  bulion->garnek[label="odcedź"]
   garnek->garnek2 
   garnek2->garnek3[label="zagotuj"]
   trawa->garnek3
   garnek3->garnek4 
   kaffir->garnek4
-  garnek4->garnek5[label="gotuj na srednim ogniu\n(poziom 8 na mojej kuchence)\n przez kilka minut"]
+  garnek4->garnek5[label="gotuj na średnim ogniu\n(poziom 8 na mojej kuchence)\n przez kilka minut"]
 
   cebula->garnek5
   garnek5->garnek7
@@ -55,6 +55,6 @@ digraph G {
   miod->garnek10
   chilli->garnek10
   garnek10->garnek11
-  garnek11->garnek12[label="wylacz grzanie i wymieszaj"]
+  garnek11->garnek12[label="wyłącz grzanie i wymieszaj"]
 
 }
