@@ -11,7 +11,7 @@ digraph G {
   bulion[label="bulion\n(1 litr)"]
   krewetki[label="krewetki\n(rozmrożone, 200g)"]
   sol[label="sól\n(szczypta)"]
-  miod[label="Miod\n(2 łyżki stołowe)"]
+  miod[label="Miod\n(1 płaska łyżeczka)"]
   koncentrat[label="koncentrat pomidorowy\n(maly słoiczek)"]
   smietana[label="śmietana 18% / 30%\n(1 łyżka)"]
 
@@ -36,7 +36,7 @@ digraph G {
   smietana->garnek6[label="wymieszaj w dwóch łyżkach zupy\n i dolej do garnka"]
   garnek6->garnek7
 
-  krewetki->garnek7
+  krewetki->garnek7[label="Stefa nie chce gotowania krewetek z zupą"]
   garnek7->garnek8[label="Gotuj przez 3 minuty"]
 
 
