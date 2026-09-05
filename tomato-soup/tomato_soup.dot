@@ -1,0 +1,43 @@
+
+digraph G {
+  fontsize=20
+  label="Zupa Pomidorowa"
+  {rank=same garnek,bulion}
+  {rank=same garnek3,koncentrat}
+  {rank=same garnek4,miod}
+  {rank=same garnek5,sol}
+  {rank=same garnek6,smietana}
+  {rank=same garnek7,krewetki}
+  bulion[label="bulion\n(1 litr)"]
+  krewetki[label="krewetki\n(rozmrożone, 200g)"]
+  sol[label="sól\n(szczypta)"]
+  miod[label="Miod\n(2 łyżki stołowe)"]
+  koncentrat[label="koncentrat pomidorowy\n(maly słoiczek)"]
+  smietana[label="śmietana 18% / 30%\n(1 łyżka)"]
+
+  garnek[shape=rectangle,label="Garnek do gotowania"]
+  garnek2[shape=rectangle,label="Garnek z bulionem"]
+  garnek3[shape=rectangle,label="Garnek z zagotowanym bulionem"]
+  garnek4[shape=rectangle,label="Garnek z zagotowanym bulionem\n i koncentratem pomidorowym"]
+  garnek5[shape=rectangle,label="Garnek z zagotowanym bulionem\koncentratem i\n miodem"]
+  garnek6[shape=rectangle,label="Garnek z zagotowanym bulionem\koncentratem,\n miodem i solą"]
+  garnek7[shape=rectangle,label="Garnek z zagotowanym bulionem\koncentratem,\n miodem, solą i\nśmietaną"]
+  garnek8[shape=rectangle,label="Garnek z zagotowanym bulionem\koncentratem,\n miodem, solą,\nśmietaną i krewetkami"]
+ 
+  bulion->garnek[label="odcedź"]
+  garnek->garnek2 
+  garnek2->garnek3[label="zagotuj"]
+  koncentrat->garnek3[label="wmieszaj"]
+  garnek3->garnek4[label="gotuj na małym\n ogniu przez 3-4 min"] 
+  miod->garnek4
+  garnek4->garnek5
+  sol->garnek5
+  garnek5->garnek6
+  smietana->garnek6[label="wymieszaj w dwóch łyżkach zupy\n i dolej do garnka"]
+  garnek6->garnek7
+
+  krewetki->garnek7
+  garnek7->garnek8[label="Gotuj przez 3 minuty"]
+
+
+}
