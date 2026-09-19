@@ -1,0 +1,71 @@
+
+digraph G {
+  ortho=true
+  fontsize=20
+  label="\n\nTosty francuskie"
+  URL="https://burczymiwbrzuchu.pl/przepisy/tosty-francuskie-w-cukrze-cynamonowym"
+  {rank=same miska1,jajka}
+  {rank=same miska2,mleko}
+  {rank=same miska3,sol}
+  {rank=same miska4,chleb1}
+  {rank=same miseczka1,cukier}
+  {rank=same miseczka2,cynamon}
+  {rank=same miseczka3,chleb2}
+  {rank=same maslo,patelnia1}
+  {rank=same chleb3,patelnia2}
+
+
+  jajka[label="dwa jajka"]
+  sol[label="szczypta soli"]
+  mleko[label="mleko\n(4 lyzki stolowe)"]
+  maslo[label="maslo\n(Do rozgrzania na patelnie)"]
+  cukier[label="cukier\n(4 lyzki stolowe)"]
+  cynamon[label="cynamon\n(pol lyzeczki)"]
+  chleb1[label="chleb\n(kromki czerstwego chleba)"]
+  chleb2[label="zamoczony chleb"]
+  chleb3[label="zamoczony chleb\n z cukrem i cynamonem"]
+  chleb4[label="usmazony chleb\n(z jednej strony)"]
+  chleb4[label="usmazony chleb\n(z obu stron)"]
+
+
+  miska1[label="Miska",shape=rectangle]
+  miska2[label="Miska z jajkami",shape=rectangle]
+  miska3[label="Miska z jajkami\n i mlekiem ",shape=rectangle]
+  miska4[label="Miska z jajkami\n, mlekiem i sola",shape=rectangle]
+
+  miseczka1[label="Miseczka",shape=rectangle]
+  miseczka2[label="Miseczka z cukrem",shape=rectangle]
+  miseczka3[label="Miseczka z cukrem\n i cynamonem",shape=rectangle]
+
+
+
+  patelnia1[label="Patelnia",shape=rectangle]
+  patelnia2[label="Patelnia z\nroztopionym maslem",shape=rectangle]
+  patelnia3[label="Patelnia z jednostronnie\nusmazona kromka chleba",shape=rectangle]
+  patelnia4[label="Patelnia z gotowym tostem",shape=rectangle]
+
+
+  jajka->miska1[label="rozbij"]
+  miska1->miska2
+  mleko->miska2->miska3
+  sol->miska3
+  miska3->miska4[label="wymieszaj/roztrzep"]
+
+  cukier->miseczka1
+  miseczka1->miseczka2
+  cynamon->miseczka2
+  miseczka2->miseczka3[label="wymieszaj"]
+
+  chleb1->miska4[label="delikatnie zamocz"]
+  miska4->chleb2
+  chleb2->miseczka3[label="posyp jedna strone chleba\nna ktorej bedziesz smazyl"]
+  miseczka3->chleb3
+  maslo->patelnia1
+  patelnia1->patelnia2[label="rozgrzej az\nsie stopi maslo"]
+  chleb3->patelnia2
+  patelnia2->patelnia3[label="smaz okolo 4 min\n(kuchenka poziom 8)"]
+  patelnia3->patelnia4[label="Posyp mieszanka cukru i cynamonu\nObroc kromke chleba\n\nsmaz okolo 4 min\n(kuchenka poziom 8)"]
+  patelnia4->chleb4
+  patelnia4->chleb2[label="Powotrz z\n kolejnymi kromkami"]
+}
+
