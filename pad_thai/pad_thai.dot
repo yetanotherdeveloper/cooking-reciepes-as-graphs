@@ -19,7 +19,7 @@ digraph G {
   noodles[label="Narrow rice noodles\n(50 g)"]
   shrimp[label="Dried shrimp\n(1 tsp)"]
   radish[label="Pickled radish\n(1 tsp)"]
-  water[label="Water\n(1/4 cup)"]
+  water[label="Water\n(1/2 cup)"]
   wok4[label="Wok with noodles,\nshrimp and radish",shape=rectangle]
   
   oyster[label="Oyster sauce\n(1 tbsp)"]
